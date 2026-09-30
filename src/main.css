@@ -1,0 +1,43 @@
+@import url(./styles/colors.css);
+@import url(./styles/weather-theme.css);
+@import url(./styles/search.css);
+@import url(./styles/saved-cities.css);
+@import url(./styles/weather-panel.css);
+@import url(./styles/forcast.css);
+@import url(./styles/hourly.css);
+@import url(./styles/icon.css);
+
+@font-face{
+    font-family: inter;
+    src: url(./public/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: var(--gradient-bg);
+    font-family: inter;    min-height: 100vh;
+    padding: 20px;
+}
+
+@media(max-width: 600px){
+
+    body{
+        padding: 20px;
+    }
+
+}

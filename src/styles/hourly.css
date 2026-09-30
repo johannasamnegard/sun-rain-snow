@@ -1,0 +1,130 @@
+/* Toggle button */
+.hourly-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 40px auto auto auto;
+    background: rgba(var(--white-rgb), 0.15);
+    color:  rgba(var(--white-rgb), 0.9);
+    border-radius: 15px;
+    padding: 5px 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.15s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hourly-toggle-icon {
+    transition: transform 0.2s ease;
+}
+
+.hourly-toggle.open .hourly-toggle-icon{
+    transform: rotate(180deg);
+}
+
+.hourly-toggle.open {
+    border-radius: 15px 15px 0 0;
+}
+
+.hourly-toggle:hover{
+    background-color: rgba(var(--white-rgb), 0.4);
+    transform: scale(1.05);
+}
+
+.hourly-toggle:active{
+    transform: scale(0.97)
+}
+
+.hourly-toggle[hidden] {
+    display: none;
+}
+
+/* TABLE */
+
+.hourly-table-wrapper{
+    overflow-x: auto;
+    scrollbar-color: rgba(var(--white-rgb), 0.3) rgba(var(--black-rgb), 0.15);
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    background: rgba(var(--white-rgb), 0.6);
+    backdrop-filter: blur(10px);
+    scroll-behavior: smooth;
+}
+
+.hourly-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    cursor: default;
+    width: 100%;
+}
+
+.hourly-table th, .hourly-table td {
+    white-space: nowrap;
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom: 1px solid rgba(var(--white-rgb), 0.3);
+    padding: 6px 14px;
+}
+
+/* No stroke in the bottomline */
+.hourly-table tbody tr:last-child th,
+.hourly-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Hovered column, toggled via JS delegation in render.ts */
+.hourly-table td.hovered-column,
+.hourly-table th.hovered-column {
+    background: rgba(var(--white-rgb), 0.4);
+}
+
+/* New-day marker, since the rolling 24h window can cross midnight */
+.hourly-table th.new-day,
+.hourly-table td.new-day {
+    border-left: 2px solid rgba(var(--white-rgb), 0.8);
+}
+
+.new-day-label {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    font-weight: 700;
+    opacity: 0.85;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Header - time */
+.hourly-table th.time-header {
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-bottom: 2px solid rgba(var(--white-rgb), 0.7);
+    background: rgba(var(--white-rgb), 0.5);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.15s ease;;
+    position: relative;
+    height: 52px;
+}
+
+/* Header - lable */
+.lable-header, .empty-time-header{
+    position: sticky;
+    left: 0;
+    background: var(--color-ocean-blue);
+    border-right: 2px solid rgba(var(--white-rgb), 0.8);
+    z-index: 1;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.hourly-table th.lable-header{
+    text-align: left;
+    color:  rgba(var(--white-rgb), 0.9);
+}
+
+

@@ -1,0 +1,103 @@
+/** FORECAST */
+.forecast-list {
+    display: flex;
+    flex-wrap: nowrap;
+    
+    gap: 12px;
+    list-style: none;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.forecast-day {
+    position: relative;
+    flex: 1 1 0;
+    transition: transform 0.2s ease;
+}
+
+.forecast-day:hover {
+    transform: scale(1.07);
+}
+
+.forecast-day:active {
+    transform: scale(1.02);
+    transition: transform 0.08s ease-out;
+}
+
+.forecast-day button{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(var(--white-rgb), 0.8);
+    color: var(--panel-accent, var(--color-black));
+    border-radius: 10px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.15s ease, transform 0.2s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+}
+
+
+.forecast-day.highlighted button{
+    outline: 5px solid currentColor;
+}
+
+.forecast-day button:hover{
+    background-color: var(--color-white);
+}
+
+.forecast-today-lable {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    
+    top: -23px;
+
+    width: fit-content;
+    margin: 0 auto;
+    pointer-events: none;
+    font-size: 0.7rem;
+
+    color: var(--color-white);
+    background: var(--color-midnight-blue);
+    padding:  4px 15px 15px;
+    border-radius: 10px 10px 0 0 ;
+    box-shadow: var(--shadow-sm);
+}
+
+
+
+@media(max-width: 600px){
+
+    .forecast-list{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        gap: 10px;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding: 30px 20px;
+    }
+
+    .forecast-day::-webkit-scrollbar{
+        display: none;
+    }
+
+    .forecast-day{
+        flex: 0 0 100px;
+    }
+
+    .forecast-day button {
+        padding: 8px;
+    }
+}

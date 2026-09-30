@@ -1,0 +1,79 @@
+/** ICONS */
+
+.start-icon{
+    width: 200px;
+    height: auto;
+    stroke-width: 0.75px;
+    animation: floatIcon 4s ease-in-out infinite;
+}
+
+.start-icon.icon-fallback {
+    stroke-width: 1px;
+    animation: floatIconFallback 4s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+}
+
+/* combines the fallback's scale with the float animation*/
+@keyframes floatIconFallback {
+    0%, 100% {transform: scale(0.56) translateY(0);}
+    50% {transform: scale(0.56) translateY(-10px);}
+}
+
+
+.wind-direction-icon {
+    transform: rotate(var(--wind-direction, 0deg));
+    transform-origin: center;
+    transition: transform 0.2s ease;
+    stroke-width: 1.5px;
+}
+
+.saved-weather-icon {
+    width: 40px;
+    height: auto;
+    stroke-width: 1px;
+}
+
+.forcast-icon {
+    width: 50px;
+    height: auto;
+    stroke-width: 1px;
+    margin: 4px;
+}
+
+.forcast-icon.icon-fallback {
+    stroke-width: 1.25px;
+    transform: scale(0.7);
+}
+
+
+.hourly-weather-icon{
+    height: 25px;
+    width: auto;
+    stroke-width: 1.5px;
+}
+
+.weather-details svg{
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.max-temp-icon{
+    fill: currentColor;
+}
+
+@media(max-width: 600px){
+    .saved-weather-icon {
+    width: 30px;
+    height: auto;
+    stroke-width: 1.25px;
+}
+
+.weather-details svg{
+    height: 1rem;
+    width: 1rem;
+}
+}

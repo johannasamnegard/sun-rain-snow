@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/main.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+
+    <main>
+
+        <div class="search-wrapper">
+          
+          <form id="searchForm">
+            <input
+              type="text"
+              id="searchInput"
+              autocomplete="off"
+              name="city"
+              placeholder="Enter city name"
+              class="search-input"
+            />
+            <button type="submit" class="search-button">
+              <i data-lucide="search" class="search-icon"></i>
+              Search
+            </button>
+          </form>
+          <div id="searchDropdown" class="search-dropdown"></div>
+
+        </div>
+
+
+      <div id="savedCitiesList"></div>
+
+    <dialog id="maxCitiesDialog">
+      <p>You can only save up to 6 cities</p>
+    </dialog>
+
+      <div id="weatherList"></div>
+
+      <div id="forecastList"></div>
+
+      <button id="hourlyToggle" class="hourly-toggle" type="button" hidden>Hourly forecast <i data-lucide="chevron-down" class="hourly-toggle-icon"></i></button>
+      <div id="hourlyList" hidden></div>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

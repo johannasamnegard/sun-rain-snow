@@ -1,0 +1,147 @@
+
+/** WRAPPER - Search feild */
+.search-wrapper {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    min-width: 250px; 
+}
+
+/** INPUT - Padding-right so text don´t go under search button*/
+.search-input {
+    position: relative;
+    z-index: 1001;
+    border: 0;
+    outline: 0;
+    background: rgba(var(--white-rgb), 0.7);
+    padding: 10px 25px;
+    height: 30px;
+    border-radius: 30px;
+    width: 100%;
+    padding-right: 90px; 
+    font-size: 14px;
+    box-shadow: var(--shadow-sm);
+
+}
+
+/** BUTTON - Positioning in inputfeild (absolute). Center text in button (flex) */
+.search-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    border: 0;
+    outline: 0;
+    color:  rgba(var(--white-rgb), 0.9);
+    transition: box-shadow 0.2s ease;
+    transform-origin: right center;
+    
+    padding: 10px 25px;
+    height: 30px;
+    border-radius: 0 30px 30px 0px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 1002;
+}
+
+.search-button:hover{
+    box-shadow: 0 0 20px var(--color-white);
+}
+
+.search-button:active{
+    transform: translateY(-50%) scale(0.97); /* keep the centering translate, only add the press scale */
+}
+
+.search-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/** DROPDOWN MENUE - Matching the forms top position (top). Same width as .search-form (input + button). z-index lays dropdown over everything  */
+.search-dropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(var(--white-rgb), 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+}
+
+.search-result-list{
+    list-style: none;
+    margin: 0;
+    padding: 40px 0 20px 0;
+}
+
+.search-dropdown .search-message{
+    display: block;
+    padding: 40px 10px 40px 30px;
+}
+
+.city-select-button {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: color 0.15s ease;
+    padding: 4px 30px;
+    box-sizing: border-box;
+}
+
+ .city-item{
+display: flex;
+align-items: center;
+}
+
+.city-item:hover, .city-item.highlighted{
+    background-color: rgb(var(--white-rgb));
+}
+
+.map-pin-icon {
+    width: 16px;
+    height: auto;
+    flex-shrink: 0
+}
+
+.save-search-city-icon {
+    width: 16px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.save-search-city-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 30px 8px 8px
+}
+
+
+@media(max-width: 600px){
+    .search-button{
+        padding: 5px 15px 5px 5px;
+    }
+}

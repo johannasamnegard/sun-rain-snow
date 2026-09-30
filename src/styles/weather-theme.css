@@ -1,0 +1,115 @@
+/* SUN */
+body.weather-bg-sun {
+    background: var(--gradient-bg-sun);
+
+    & :is(.lable-header,.empty-time-header,.search-button, .hourly-toggle, .forecast-today-lable){
+        background: var(--color-accent-sun)
+    }
+
+    & :is(.hourly-table, .saved-city-item, .forecast-day button) {
+        color: var(--color-accent-sun);
+    }
+}
+.panel-bg-sun {--panel-accent: var(--color-accent-sun)}
+
+/* CLOUD-SUN */
+body.weather-bg-cloud-sun {
+    background: var(--gradient-bg-cloud-sun);
+
+        & :is(.lable-header,.empty-time-header,.search-button, .hourly-toggle, .forecast-today-lable){
+        background: var(--color-accent-cloud-sun)
+    }
+
+        & :is(.hourly-table, .saved-city-item, .forecast-day button) {
+        color: var(--color-accent-cloud-sun);
+    }
+}
+.panel-bg-cloud-sun {--panel-accent: var(--color-accent-cloud-sun)}
+
+/* CLOUD-FOG */
+body.weather-bg-cloud, body.weather-bg-cloud-fog {
+    background: var(--gradient-bg-cloud-fog);
+
+    & :is(.lable-header,.empty-time-header,.search-button, .hourly-toggle, .forecast-today-lable){
+        background: var(--color-accent-cloud-fog)
+    }
+
+    & :is(.hourly-table, .saved-city-item, .forecast-day button) {
+        color: var(--color-accent-cloud-fog);
+    }
+}
+.panel-bg-cloud,
+.panel-bg-cloud-fog {--panel-accent: var(--color-accent-cloud-fog)}
+
+/* CLOUD-DRIZZLE */
+body.weather-bg-cloud-drizzle, body.weather-bg-cloud-hail {
+    background: var(--gradient-bg-cloud-drizzle-hail);
+
+    & :is(.lable-header,.empty-time-header,.search-button, .hourly-toggle, .forecast-today-lable){
+        background: var(--color-accent-cloud-drizzle-hail)
+    }
+
+    & :is(.hourly-table, .saved-city-item, .forecast-day button) {
+        color: var(--color-accent-cloud-drizzle-hail);
+    }
+}
+.panel-bg-cloud-drizzle,
+.panel-bg-cloud-hail {--panel-accent: var(--color-accent-cloud-drizzle-hail)}
+
+/* CLOUD-RAIN-WIND */
+body.weather-bg-cloud-rain, body.weather-bg-cloud-rain-wind {
+    background: var(--gradient-bg-cloud-rain-wind);
+
+    & :is(.lable-header,.empty-time-header,.search-button, .hourly-toggle, .forecast-today-lable){
+    background: var(--color-accent-cloud-rain-wind)
+    }
+
+    & :is(.hourly-table, .saved-city-item, .forecast-day button) {
+    color: var(--color-accent-cloud-rain-wind);
+    }
+}
+.panel-bg-cloud-rain,
+.panel-bg-cloud-rain-wind {--panel-accent: var(--color-accent-cloud-rain-wind)}
+
+/* CLOUD-SNOWFLAKE */
+body.weather-bg-cloud-snow, body.weather-bg-snowflake {
+    background: var(--gradient-bg-cloud-snow-flake);
+
+    & :is(.lable-header,.empty-time-header,.search-button, .hourly-toggle, .forecast-today-lable){
+    background: var(--color-accent-cloud-snow-flake)
+    }
+
+    & :is(.hourly-table, .saved-city-item, .forecast-day button) {
+        color: var(--color-accent-cloud-snow-flake);
+    }
+}
+.panel-bg-cloud-snow,
+.panel-bg-snowflake {--panel-accent: var(--color-accent-cloud-snow-flake)}
+
+/* CLOUD-LIGHTNING */
+body.weather-bg-cloud-lightning {
+    background: var(--gradient-bg-cloud-lightning);
+
+    & :is(.lable-header,.empty-time-header,.search-button, .hourly-toggle, .forecast-today-lable){
+    background: var(--color-accent-cloud-lightning)
+    }
+
+    & :is(.hourly-table, .saved-city-item, .forecast-day button) {
+    color: var(--color-accent-cloud-lightning);
+    }
+}
+.panel-bg-cloud-lightning {--panel-accent: var(--color-accent-cloud-lightning)}
+
+/* UNKNOWN-WEATHER */
+body.weather-bg-circle-off {
+    background: var(--gradient-bg-unknown-weather);
+
+    & :is(.lable-header,.empty-time-header,.search-button, .hourly-toggle, .forecast-today-lable){
+    background: var(--color-accent-unknown-weather)
+    }
+
+    & :is(.hourly-table, .saved-city-item, .forecast-day button) {
+        color: var(--color-accent-unknown-weather);
+    }
+}
+.panel-bg-circle-off {--panel-accent: var(--color-accent-unknown-weather)}

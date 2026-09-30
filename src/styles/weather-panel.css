@@ -1,0 +1,167 @@
+/** WEATHER PANEL */
+
+.weather-panel{
+    display: grid;
+    grid-template-columns: auto 1fr auto ;
+    grid-template-rows: auto 1fr;
+    grid-gap: 20px;
+    align-items: start;
+    background-color: rgba(var(--white-rgb), 0.8);
+    color: var(--panel-accent, var(--color-black));
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    padding: 20px 50px;
+    margin-top: 30px;
+    
+}
+
+.weather-panel.welcome-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    min-height: 250px;
+}
+
+/* TITEL + HEART */
+.weather-title-row{
+    display: flex;
+    gap: 10px;
+    animation: slideUpContent 0.4s ease;
+}
+
+.title-date{
+    grid-column: 1/3;
+    grid-row: 1;
+    animation: slideUpContent 0.4s ease;
+
+}
+
+
+/* BIG TEMP */
+
+.weather-temp-main{
+grid-column: 1;
+grid-row: 2;
+align-self: flex-end;
+animation: slideUpContent 0.4s ease;
+}
+
+.temp-big {
+    font-size: clamp(48px, 10vw, 90px);
+    font-weight: 300;
+}
+
+/* WEATHER-ICON */
+
+.weather-condition {
+grid-column: 2;
+grid-row: 1/3;
+justify-self: center;
+align-self: flex-end;
+animation: slideUpContent 0.4s ease;
+}
+
+.today-weather-icon {
+    width: clamp(110px, 20vw, 250px);
+    height: auto;
+    stroke-width: 0.6px;
+    animation: floatIcon 4s ease-in-out infinite;
+}
+
+.today-weather-icon.icon-fallback {
+    stroke-width: 1px;
+    animation: floatIconFallback 4s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+}
+
+/* combines the fallback's scale with the float animation*/
+@keyframes floatIconFallback {
+    0%, 100% {transform: scale(0.56) translateY(0);}
+    50% {transform: scale(0.56) translateY(-10px);}
+}
+
+@keyframes slideUpContent {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DETAILED LIST */
+
+.weather-details{
+    grid-column: 3;
+    grid-row: 1/3;
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: space-evenly;
+    gap: 12px 20px;
+    animation: slideUpContent 0.4s ease;
+}
+
+.detail-label {
+    display: block;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.detail-value {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 3px 0 0 0;
+    gap: 8px;
+}
+
+
+/* MOBILE */
+@media(max-width: 600px){
+
+.weather-panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 30px;
+
+}
+
+.title-date{
+    grid-column: 1/3;
+    grid-row: 1;
+
+}
+
+.weather-condition {
+grid-column: 2;
+grid-row: 2;
+justify-self: left;
+align-self: center;
+}
+
+.weather-temp-main{
+grid-column: 1;
+grid-row: 2;
+align-self: center;
+}
+
+.weather-details{
+    grid-column: 1/3;
+    grid-row: 3;
+}
+
+.detail-value{
+    font-size: 1rem;
+}
+}
