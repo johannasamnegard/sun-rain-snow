@@ -6,12 +6,12 @@
 @import url(./styles/forcast.css);
 @import url(./styles/hourly.css);
 @import url(./styles/icon.css);
+@import url(./styles/weather-effects.css);
 
 @font-face{
     font-family: inter;
     src: url(./public/Inter/Inter-VariableFont_opsz\,wght.ttf);
 }
-
 
 * {
     margin: 0;

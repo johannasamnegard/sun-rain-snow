@@ -40,6 +40,10 @@
     transform: scale(1.05);
 }
 
+.saved-city-wrapper:active{
+    transform: scale(0.97);
+}
+
 .delete-city-item{
     position: absolute;
     top: 0;
@@ -75,8 +79,8 @@
 
 
 .save-city-button{
-    background-color: var(--color-white);
     border: none;
+    background: none;
     cursor: pointer;
     color: inherit;
     transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.15s ease;
@@ -92,7 +96,6 @@
     transform: scale(1.25);
 }
 
-/* same specificity as the hover rule above (and declared after it) so it wins while pressed */
 .save-city-button:active .save-city-icon{
     transform: scale(1.1);
 }
@@ -115,7 +118,7 @@
     z-index: 1010;
 }
 
-@media(max-width: 600px){
+@media(max-width: 700px){
 
     .saved-city-item{
         margin: 7px;

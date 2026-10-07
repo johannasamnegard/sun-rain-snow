@@ -1,68 +1,48 @@
 /** COLOR PALETTE. Central place for every color used across the app */
 :root {
-    /* Brand colors */
-
-    --color-sky-cyan: #00edfe; /* top-gradient background*/ /* #00edfe */
-    --color-deep-navy: #1f2e6e; /* bottom-gradient background */ /* #1f2e6e */
-    --color-ocean-blue: #3a96bb; /* hourly row-label background */
-    --color-ocean-blue-dark: #3486ac; /* bottom-gradient dropdown */
-    --color-sky-light: #46bcd4; /* top-gradient dropdown */
-    --color-midnight-blue: #042e50; /* Search-button background */
-
-    --color-sunny-light: #fdf8e1;
-    --color-sunny:  #ffc548;
-    --color-cloud: #a6d1ec;
-
     /* Neutrals */
-    --color-text: #555555; /* Search-input text color */
-    --color-black: #000000; /* Fills of saved-heart and max-temp */
-    --color-white: #ffffff; /* Glow for hovering */
-
-
+    --color-white: #ffffff;
 
     /* RGB channels, for use inside rgba() where alpha varies */
     --white-rgb: 255, 255, 255; /* Base for transparent white */
     --black-rgb: 0, 0, 0; /* Base for transparent black */
-    --sky-light-rgb: 70, 188, 212; /* Alfa version for drop down gradient */
-    --ocean-blue-dark-rgb: 52, 134, 172; /* Alfa version for drop down gradient */
 
     /* Shadows, reused across panels/buttons/dropdowns */
     --shadow-xs: 0 2px 5px rgba(var(--black-rgb), 0.3);
     --shadow-sm: 0 4px 10px rgba(var(--black-rgb), 0.3);
     --shadow-lg: 0 8px 20px rgba(var(--black-rgb), 0.3);
-
-    /* Composed gradients */
-    --gradient-bg: linear-gradient(150deg, var(--color-sky-cyan), var(--color-deep-navy));
-    --gradient-dropdown: linear-gradient(rgba(var(--sky-light-rgb), 0.7), rgba(var(--ocean-blue-dark-rgb), 0.7));
     
     /* Weather */
 
-    --sun-light:#faf289 ;
-    --sun-dark: #a81529;
+    --start-cyan: #00edfe; 
+    --start-deep-navy: #1f2e6e; 
+
+    --sun-light:#ffeea0 ;
+    --sun-dark: #ff6a45;
 
     --cloud-sun-light: #ffeaa3;
     --cloud-sun-dark: #17596d;
 
-    --cloud-fog-light: #e7ddec;
-    --cloud-fog-dark: #685a4f;;
+    --cloud-fog-light: #eae4ee;
+    --cloud-fog-dark: #72665e;;
 
-    --cloud-drizzle-hail-light: #e4fdff;
-    --cloud-drizzle-hail-dark: #32467c;
+    --cloud-drizzle-hail-light: #c2f6fd;
+    --cloud-drizzle-hail-dark: #2c428b;
 
-    --cloud-rain-wind-light: #cdf3ff;
-    --cloud-rain-wind-dark: #000f41;
+    --cloud-rain-wind-light: #b6ccdd;
+    --cloud-rain-wind-dark: #2c3480;
 
     --cloud-snow-flake-light:   #f5cdff;
     --cloud-snow-flake-dark: #3292af;
 
-    --cloud-lightning-light:#f1e2f1;
-    --cloud-lightning-dark:#33184d;
+    --cloud-lightning-light:#d5defc;
+    --cloud-lightning-dark:#57305f;
 
     --unknown-weather-light: var(--cloud-fog-light);
     --unknown-weather-dark: var(--cloud-fog-dark);
 
     /* Gradient-weather */
-
+    --gradient-bg: linear-gradient(150deg, var(--start-cyan), var(--start-deep-navy));
     --gradient-bg-sun: linear-gradient(150deg, var(--sun-light), var(--sun-dark));
     --gradient-bg-cloud-sun: linear-gradient(150deg, var(--cloud-sun-light), var(--cloud-sun-dark));
     --gradient-bg-cloud-fog: linear-gradient(150deg, var(--cloud-fog-light), var(--cloud-fog-dark));
@@ -72,12 +52,13 @@
     --gradient-bg-cloud-lightning: linear-gradient(150deg, var(--cloud-lightning-light), var(--cloud-lightning-dark));
     --gradient-bg-unknown-weather: linear-gradient(150deg, var(--unknown-weather-light), var(--unknown-weather-dark));
 
-
+    /* Accent colors */
     --color-red: #5F0B29;
     --color-blue: #0D2D4E;
     --color-blue-dark: #02042D;
     --color-purple: #281738;
 
+    /* Accent weather */
     --color-accent-sun: var(--color-red);
     --color-accent-cloud-sun: var(--color-blue);
     --color-accent-cloud-fog: var(--color-purple);

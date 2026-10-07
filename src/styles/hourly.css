@@ -12,7 +12,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    transition: color 0.15s ease;
+    transition: color 0.15s ease, transform 0.15s ease;
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-lg);
 }
@@ -20,6 +20,7 @@
 .hourly-toggle-icon {
     transition: transform 0.2s ease;
 }
+
 
 .hourly-toggle.open .hourly-toggle-icon{
     transform: rotate(180deg);
@@ -29,12 +30,11 @@
     border-radius: 15px 15px 0 0;
 }
 
-.hourly-toggle:hover{
-    background-color: rgba(var(--white-rgb), 0.4);
+body .hourly-toggle:hover{
     transform: scale(1.05);
 }
 
-.hourly-toggle:active{
+body .hourly-toggle:active{
     transform: scale(0.97)
 }
 

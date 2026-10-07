@@ -37,13 +37,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
 
     border: 0;
     outline: 0;
+    background-color: var(--color-blue);
     color:  rgba(var(--white-rgb), 0.9);
     transition: box-shadow 0.2s ease;
-    transform-origin: right center;
     
     padding: 10px 25px;
     height: 30px;
@@ -53,12 +52,21 @@
     z-index: 1002;
 }
 
-.search-button:hover{
-    box-shadow: 0 0 20px var(--color-white);
+/** BUTTON - When clicked it will scale the text/icon to give a button effect */
+.search-button-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.15s ease;
+    transform-origin: center;
 }
 
-.search-button:active{
-    transform: translateY(-50%) scale(0.97); /* keep the centering translate, only add the press scale */
+.search-button:hover .search-button-content{
+    transform: scale(1.05);
+}
+
+.search-button:active .search-button-content{
+    transform: scale(0.97);
 }
 
 .search-icon {
@@ -113,7 +121,7 @@ align-items: center;
 }
 
 .city-item:hover, .city-item.highlighted{
-    background-color: rgb(var(--white-rgb));
+    background-color: rgba(var(--black-rgb), 0.08);
 }
 
 .map-pin-icon {
@@ -140,7 +148,7 @@ align-items: center;
 }
 
 
-@media(max-width: 600px){
+@media(max-width: 700px){
     .search-button{
         padding: 5px 15px 5px 5px;
     }

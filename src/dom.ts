@@ -31,3 +31,7 @@ export const savedCitiesList = document.getElementById(
 export const maxCitiesDialog = document.getElementById(
   "maxCitiesDialog",
 ) as HTMLDialogElement;
+
+export const weatherEffects = document.getElementById(
+  "weatherEffects",
+) as HTMLElement;

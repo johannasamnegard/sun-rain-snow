@@ -8,6 +8,19 @@
   </head>
   <body>
 
+    <!-- Decorative rain, prints behind main -->
+    <div id="weatherEffects" class="weather-effect" aria-hidden="true"></div>
+
+    <script>(function (){
+      try {
+        var saved = localStorage.getItem("saveWeather")
+        if (!saved) return
+        var parsed = JSON.parse(saved)
+        document.body.classList.add("has-saved-weather")
+        if (!parsed.icon) return
+        document.body.classList.add("weather-bg-" + parsed.icon)
+      } catch (e) {}
+    })()</script>
     <main>
 
         <div class="search-wrapper">
@@ -22,8 +35,10 @@
               class="search-input"
             />
             <button type="submit" class="search-button">
-              <i data-lucide="search" class="search-icon"></i>
-              Search
+              <span class="search-button-content">
+                <i data-lucide="search" class="search-icon"></i>
+                Search
+              </span>
             </button>
           </form>
           <div id="searchDropdown" class="search-dropdown"></div>
@@ -37,7 +52,12 @@
       <p>You can only save up to 6 cities</p>
     </dialog>
 
-      <div id="weatherList"></div>
+      <div id="weatherList">
+        <div id="weatherPlaceholder" class="weather-panel welcome-panel panel-bg-cloud-sun"><i data-lucide="cloud-sun-rain" class="start-icon"></i>
+          <p class="placeholder-empty-text">Search for a city to see the weather</p>
+          <p class="placeholder-loading-text">Loading weather...</p>
+        </div>
+      </div>
 
       <div id="forecastList"></div>
 

@@ -19,11 +19,8 @@ import {
   Thermometer,
   Sunrise,
   Sunset,
-  Wind,
   MapPin,
   Search,
-  Compass,
-  HandHelping,
   ChevronDown,
   CircleOff,
 } from "lucide";
@@ -48,11 +45,8 @@ export const iconSet = {
   Thermometer,
   Sunrise,
   Sunset,
-  Wind,
   MapPin,
   Search,
-  Compass,
-  HandHelping,
   ChevronDown,
   CircleOff,
 };
