@@ -110,12 +110,21 @@
     top: 5%;
     left: 50%;
     margin: 0;
-    padding: 10px;
+    padding: 10px 16px;
     border-radius: 10px;
     border: none;
     transform: translate(-50%, -50%);
-    background: rgba(var(--sky-light-rgb), 0.9);
+    background: rgba(var(--black-rgb), 0.75);
+    box-shadow: var(--shadow-sm);
     z-index: 1010;
+}
+
+#maxCitiesDialog p{
+    margin: 0;
+    color: var(--color-white);
+    font-family: inter;
+    font-size: 14px;
+    text-align: center;
 }
 
 @media(max-width: 700px){

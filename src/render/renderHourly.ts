@@ -140,7 +140,7 @@ hourlyList.addEventListener("mouseout", (event) => {
   if (!related || !hourlyList.contains(related)) clearColumnHighlight();
 });
 
-/* HOURLY - scroll whit mouse wheel */
+/* HOURLY - scroll with mouse wheel or trackpad (trackpads report the swipe as deltaX) */
 hourlyList.addEventListener("wheel", (event) => {
   if (!(event.target instanceof Element)) return;
   const wrapper = event.target.closest(
@@ -148,5 +148,5 @@ hourlyList.addEventListener("wheel", (event) => {
   ) as HTMLElement | null;
   if (!wrapper) return;
   event.preventDefault();
-  wrapper.scrollLeft += event.deltaY;
+  wrapper.scrollLeft += event.deltaX !== 0 ? event.deltaX : event.deltaY;
 });
