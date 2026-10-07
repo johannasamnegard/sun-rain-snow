@@ -120,16 +120,41 @@
 
 @media(max-width: 700px){
 
+    #savedCitiesList{
+        padding: 10px 0;
+    }
+
     .saved-city-item{
-        margin: 7px;
-        padding: 5px 16px 5px 6px;
+        margin: 3px;
+        padding: 5px 23px 3px 8px;
         box-shadow: var(--shadow-xs);
+    }
+
+    .saved-city-temp{
+        display: none;
+    }
+
+    .saved-weather-icon{
+        display: none;
     }
 
     .delete-city-item{
     position: absolute;
-    top: -2px;
-    right: -2px;
-    box-shadow: var(--shadow-xs);
+    margin-right: 3px;
+    top: 5px;
+    right: 3px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--black-rgb), 0.2);
+    box-shadow: none;
+    backdrop-filter: none;
 }
+
+
+
+
+
 }

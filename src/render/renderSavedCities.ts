@@ -26,7 +26,7 @@ export const renderSavedCities = async () => {
           <div class="saved-city-text">
           <p><b>${city.name}</b></p>
   
-          <p>${weather.temperature}°C</p>
+          <p class="saved-city-temp">${weather.temperature}°C</p>
           </div>
         </button>
         <button type="button" class="delete-city-item" data-lat="${city.latitude}" data-lon="${city.longitude}">

@@ -24,6 +24,11 @@
     })()</script>
     <main>
 
+        <header class="app-greeting">
+          <h1 id="greetingText" class="greeting-text"></h1>
+          <p class="greeting-subtext">Time to check out some weather?</p>
+        </header>
+
         <div class="search-wrapper">
           
           <form id="searchForm">
@@ -54,7 +59,8 @@
     </dialog>
 
       <div id="weatherList">
-        <div id="weatherPlaceholder" class="weather-panel welcome-panel panel-bg-cloud-sun"><i data-lucide="cloud-sun-rain" class="start-icon"></i>
+        <div id="weatherPlaceholder" class="weather-panel welcome-panel panel-bg-cloud-sun">
+          <i data-lucide="cloud-sun-rain" class="start-icon"></i>
           <p class="placeholder-empty-text">Search for a city to see the weather</p>
           <p class="placeholder-loading-text">Loading weather...</p>
         </div>

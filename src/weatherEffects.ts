@@ -121,6 +121,10 @@ const renderSnow = () => {
   weatherEffects.innerHTML = flakes;
 };
 
+export const startPageEffect = () => {
+  renderCloudDrift();
+};
+
 /** Decides which weather effect (if any) matches this weathercode, and renders it */
 export const updateWeatherEffect = (weathercode: number) => {
   const description = getWeatherDetails(weathercode);
