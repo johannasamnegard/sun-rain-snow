@@ -1,0 +1,98 @@
+.weather-effect{
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.raindrop{
+    position: absolute;
+    top: -10%;
+    left: var(--left);
+    width: 2px;
+    height: 20px;
+    background: rgba(var(--white-rgb), 0.3);
+    animation: fall var(--duration) linear infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes fall {
+    from { transform: translate(0, -10%) rotate(var(--rotate, 0deg));}
+    to {transform: translate(var(--driftX, 0px), 110vh) rotate(var(--rotate, 0deg));}
+}
+
+.particle {
+    position: absolute;
+    top: 100%;
+    left: var(--left);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(var(--white-rgb), 0.5);
+    animation: floatUp var(--duration) linear infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes floatUp {
+    0% {transform: translate(0,0);}
+    25% {transform: translate(var(--sway), -27.5vh);}
+    50% {transform: translate(0, -55vh);}
+    75% {transform: translate(calc(var(--sway) * -1), -82.5vh);}
+    100% {transform: translate(0, -110vh);}
+}
+
+.cloud-particle {
+    position: absolute;
+    top: var(--top);
+    left: -10%;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: rgba(var(--white-rgb), 0.5);
+    filter: blur(1px);
+    animation: driftAcross var(--duration) linear infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes driftAcross {
+    0%   { transform: translate(0, 0); }
+    25%  { transform: translate(27.5vw, var(--sway)); }
+    50%  { transform: translate(55vw, 0); }
+    75%  { transform: translate(82.5vw, calc(var(--sway) * -1)); }
+    100% { transform: translate(110vw, 0); }
+}
+
+.snowflake{
+    position: absolute;
+    top: -10%;
+    left: var(--left);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(var(--white-rgb), 0.8);
+    animation: snowFall var(--duration) linear infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes snowFall {
+  0%   { transform: translate(0, -10%); }
+  25%  { transform: translate(var(--sway), 25vh); }
+  50%  { transform: translate(0, 50vh); }
+  75%  { transform: translate(calc(var(--sway) * -1), 75vh); }
+  100% { transform: translate(0, 110vh); }
+}
+
+.lightning-flash{
+    position: absolute;
+    inset: 0;
+    background: rgba(var(--white-rgb), 0.2);
+    opacity: 0;
+    animation: lightningFlash 7s infinite;
+}
+
+@keyframes lightningFlash {
+    0%, 92%, 100% {opacity: 0;}
+    93% {opacity: 0.8;}
+    94% {opacity: 0.1;}
+    95% {opacity: 0.6;}
+    96% {opacity: 0;}
+}
