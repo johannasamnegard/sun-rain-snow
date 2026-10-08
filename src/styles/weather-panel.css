@@ -42,12 +42,18 @@ body.has-saved-weather #weatherPlaceholder .placeholder-loading-text{
 .weather-title-row{
     display: flex;
     gap: 10px;
-    animation: slideUpContent 0.4s ease;
+}
+
+.weather-title-row h2 {
+        animation: slideUpContent 0.4s ease;
 }
 
 .title-date{
     grid-column: 1/3;
     grid-row: 1;
+}
+
+.title-date p {
     animation: slideUpContent 0.4s ease;
 }
 
