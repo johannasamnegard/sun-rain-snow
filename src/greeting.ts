@@ -18,10 +18,10 @@ export const showGreeting = () => {
 const weatherSubtexts: Record<string, string> = {
   sun: "Seems like the sun will shine today!",
   "cloud-sun": "Today will bring some clouds... And sun!",
-  cloud: "Behind those clouds their is a sun... I think...",
+  cloud: "Behind those clouds there is a sun... I think...",
   "cloud-fog": "A bit harder to see today...",
   "cloud-drizzle": "Look out for some smaller drops today...",
-  "cloud-hail": "No snow, just frozen balls of rain...",
+  "cloud-hail": "Looks like there is some rain outside...",
   "cloud-rain": "A little rain never hurted no one...",
   "cloud-rain-wind": "No need to wather the plants today...",
   "cloud-snow": "Look, it´s snowing!",
