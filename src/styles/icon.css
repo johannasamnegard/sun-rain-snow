@@ -57,8 +57,8 @@
 }
 
 .weather-details svg{
-    height: clamp(1rem, 3vw, 1.5rem);
-    width: clamp(1rem, 3vw, 1.5rem);
+    height: 1.2rem;
+    width: 1.2rem;
 }
 
 .max-temp-icon{
