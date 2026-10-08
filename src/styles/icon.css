@@ -7,21 +7,9 @@
     animation: floatIcon 4s ease-in-out infinite;
 }
 
-@keyframes floatIcon {
-    0%, 100% {transform: translateY(0);}
-    50% {transform: translateY(-10px);}
-}
-
-
-
 .start-icon.no-weather {
     stroke-width: 1px;
     animation: floatIconFallback 4s ease-in-out infinite;
-}
-
-@keyframes floatIconFallback {
-    0%, 100% {transform: scale(0.56) translateY(0);}
-    50% {transform: scale(0.56) translateY(-10px);}
 }
 
 .today-weather-icon {
@@ -35,7 +23,6 @@
     stroke-width: 1px;
     animation: floatIconFallback 4s ease-in-out infinite;
 }
-
 
 .wind-direction-icon {
     transform: rotate(var(--wind-direction, 0deg));
@@ -78,6 +65,18 @@
     fill: currentColor;
 }
 
+/* Animation to .start-icon & .today-weather-icon and no weather*/
+@keyframes floatIcon {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+}
+
+@keyframes floatIconFallback {
+    0%, 100% {transform: scale(0.56) translateY(0);}
+    50% {transform: scale(0.56) translateY(-10px);}
+}
+
+/* Media query */
 @media(max-width: 700px){
     .saved-weather-icon {
     stroke-width: 1.25px;
