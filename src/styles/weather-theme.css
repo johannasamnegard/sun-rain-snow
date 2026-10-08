@@ -6,7 +6,7 @@ body.weather-bg-sun {
         background: var(--color-accent-sun)
     }
 
-    & :is(.hourly-table, .saved-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
+    & :is(.hourly-table, .saved-city-item, .delete-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
         color: var(--color-accent-sun);
     }
 }
@@ -20,7 +20,7 @@ body.weather-bg-cloud-sun {
         background: var(--color-accent-cloud-sun)
     }
 
-        & :is(.hourly-table, .saved-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
+        & :is(.hourly-table, .saved-city-item, .delete-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
         color: var(--color-accent-cloud-sun);
     }
 }
@@ -34,7 +34,7 @@ body.weather-bg-cloud, body.weather-bg-cloud-fog {
         background: var(--color-accent-cloud-fog)
     }
 
-    & :is(.hourly-table, .saved-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
+    & :is(.hourly-table, .saved-city-item, .delete-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
         color: var(--color-accent-cloud-fog);
     }
 }
@@ -49,7 +49,7 @@ body.weather-bg-cloud-drizzle, body.weather-bg-cloud-hail {
         background: var(--color-accent-cloud-drizzle-hail)
     }
 
-    & :is(.hourly-table, .saved-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
+    & :is(.hourly-table, .saved-city-item, .delete-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
         color: var(--color-accent-cloud-drizzle-hail);
     }
 }
@@ -64,7 +64,7 @@ body.weather-bg-cloud-rain, body.weather-bg-cloud-rain-wind {
     background: var(--color-accent-cloud-rain-wind)
     }
 
-    & :is(.hourly-table, .saved-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
+    & :is(.hourly-table, .saved-city-item, .delete-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
     color: var(--color-accent-cloud-rain-wind);
     }
 }
@@ -79,7 +79,7 @@ body.weather-bg-cloud-snow, body.weather-bg-snowflake {
     background: var(--color-accent-cloud-snow-flake)
     }
 
-    & :is(.hourly-table, .saved-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
+    & :is(.hourly-table, .saved-city-item, .delete-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
         color: var(--color-accent-cloud-snow-flake);
     }
 }
@@ -94,7 +94,7 @@ body.weather-bg-cloud-lightning {
     background: var(--color-accent-cloud-lightning)
     }
 
-    & :is(.hourly-table, .saved-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
+    & :is(.hourly-table, .saved-city-item, .delete-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
     color: var(--color-accent-cloud-lightning);
     }
 }
@@ -108,7 +108,7 @@ body.weather-bg-circle-off {
     background: var(--color-accent-unknown-weather)
     }
 
-    & :is(.hourly-table, .saved-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
+    & :is(.hourly-table, .saved-city-item, .delete-city-item, .forecast-day button, .greeting-text, .greeting-subtext) {
         color: var(--color-accent-unknown-weather);
     }
 }
