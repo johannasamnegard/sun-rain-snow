@@ -128,3 +128,9 @@ body .hourly-toggle:active{
 }
 
 
+@media(max-width: 700px){
+    .hourly-toggle{
+        margin: 5px auto auto auto;
+    }
+}
+
