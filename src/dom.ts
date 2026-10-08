@@ -24,6 +24,10 @@ export const hourlyToggle = document.getElementById(
   "hourlyToggle",
 ) as HTMLElement;
 
+export const animationToggle = document.getElementById(
+  "animationToggle",
+) as HTMLElement;
+
 export const savedCitiesList = document.getElementById(
   "savedCitiesList",
 ) as HTMLElement;

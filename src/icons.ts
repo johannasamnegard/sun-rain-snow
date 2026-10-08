@@ -23,6 +23,8 @@ import {
   Search,
   ChevronDown,
   CircleOff,
+  Pause,
+  Play,
 } from "lucide";
 
 export const iconSet = {
@@ -49,6 +51,8 @@ export const iconSet = {
   Search,
   ChevronDown,
   CircleOff,
+  Pause,
+  Play,
 };
 
 export function renderIcons(): void {

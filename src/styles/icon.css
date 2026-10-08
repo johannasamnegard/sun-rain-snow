@@ -65,6 +65,11 @@
     fill: currentColor;
 }
 
+body.motion-paused .start-icon,
+body.motion-paused .today-weather-icon {
+    animation-play-state: paused;
+}
+
 /* Animation to .start-icon & .today-weather-icon and no weather*/
 @keyframes floatIcon {
     0%, 100% {transform: translateY(0);}
