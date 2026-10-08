@@ -5,6 +5,7 @@ import { renderWeather } from "./render/renderWeatherPanel";
 import { renderForecast } from "./render/renderForecast";
 import { renderHourly, getHoursForDay } from "./render/renderHourly";
 import { appState } from "./state";
+import { updateGreetingSubtext } from "./greeting";
 
 /** Renders main panel, forecast and hourly table for a combo of city & weather + tracks it as the current selection */
 export const showWeather = (city: City, weather: CurrentWeather) => {
@@ -14,4 +15,5 @@ export const showWeather = (city: City, weather: CurrentWeather) => {
   appState.currentCity = city;
   appState.currentWeather = weather;
   updateWeatherEffect(weather.weathercode);
+  updateGreetingSubtext(weather.weathercode);
 };

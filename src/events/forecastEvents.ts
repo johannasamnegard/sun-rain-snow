@@ -3,6 +3,7 @@ import { updateWeatherEffect } from "../weatherEffects";
 import { renderForecast, renderDayOverview } from "../render/renderForecast";
 import { renderHourly, getHoursForDay } from "../render/renderHourly";
 import { appState } from "../state";
+import { updateGreetingSubtext } from "../greeting";
 
 export const initForecast = () => {
   /** FORECAST - Button to get data from clicked forecast day*/
@@ -25,6 +26,7 @@ export const initForecast = () => {
     renderHourly(getHoursForDay(appState.currentWeather, index));
 
     updateWeatherEffect(appState.currentWeather.forecast.weathercode[index]);
+    updateGreetingSubtext(appState.currentWeather.forecast.weathercode[index]);
   });
 
   /* HOURLY - Click on the toggle button */
