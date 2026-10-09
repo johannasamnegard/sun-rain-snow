@@ -52,6 +52,7 @@ body .hourly-toggle:active{
     background: rgba(var(--white-rgb), 0.6);
     backdrop-filter: blur(10px);
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
 }
 
 .hourly-table {
@@ -109,6 +110,7 @@ body .hourly-toggle:active{
     transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.15s ease;;
     position: relative;
     height: 52px;
+    scroll-snap-align: start;
 }
 
 /* Header - lable */

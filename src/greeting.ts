@@ -23,7 +23,7 @@ const weatherSubtexts: Record<string, string> = {
   "cloud-drizzle": "Look out for some smaller drops today...",
   "cloud-hail": "Looks like there is some rain outside...",
   "cloud-rain": "A little rain never hurted no one...",
-  "cloud-rain-wind": "No need to wather the plants today...",
+  "cloud-rain-wind": "No need to water the plants today...",
   "cloud-snow": "Look, it´s snowing!",
   snowflake: "Do you wanna build a Snowman?",
   "cloud-lightning": "Best to stay inside today and get cosy...",
