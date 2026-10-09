@@ -25,6 +25,7 @@ export async function getWeather(
       .replace("{forecast}", forecastDays.toString()),
   );
   const data = await response.json();
+  const todayIndex = getTodayIndex();
 
   return {
     temperature: data.current.temperature_2m,
@@ -33,10 +34,10 @@ export async function getWeather(
     windspeed: data.current.wind_speed_10m,
     winddirection: data.current.wind_direction_10m,
     rain: data.current.precipitation,
-    sunrise: data.daily.sunrise[0],
-    sunset: data.daily.sunset[0],
-    tempMax: data.daily.temperature_2m_max[0],
-    tempMin: data.daily.temperature_2m_min[0],
+    sunrise: data.daily.sunrise[todayIndex],
+    sunset: data.daily.sunset[todayIndex],
+    tempMax: data.daily.temperature_2m_max[todayIndex],
+    tempMin: data.daily.temperature_2m_min[todayIndex],
     hourly: {
       time: data.hourly.time,
       weathercode: data.hourly.weather_code,
